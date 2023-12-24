@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+  <div id="starter" class="container starter d-flex align-items-center justify-content-center">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md">
+        <p class="fs-1">Hej to ja Igor, zagrasz w moją mini-grę please?</p>
+      </div>
+    </div>
+  </div>
+  <div id="finish" class="container starter d-flex align-items-center justify-content-center">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md">
+        <p class="fs-1">Yumi została nakarmiona! Wygrałaś kartkę świątęczną od Igora</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="container " id="finish2">
+    <div class="row">
+
+      <div class="col-md kartka" style="position: relative;">
+        <p class="fs-2 fw-bold"
+          style="position: absolute; right: 35rem; top: 2rem; background-color: whitesmoke; padding: 1rem;">Wesołych
+          świąt!</p>
+        <p class="fs-4" id="zyczenia">Hej Misia chciałbym Ci życzyć tego byś się nie zmieniała i była zawsze moją
+          Martynką, ale masz teraz przed sobą wiele trudnych decyzji. <br> Nie bój się ich
+          podejmować bo od tego zależy w jakim miejscu będziesz za parę lat. A jak to w naszej ludzkiej naturze bywa
+          najbardziej żałujemy tych decyzji których tak naprawdę nie podjęliśmy lub baliśmy się. <br>
+          Ten rok był ciężki, jestem dumny z tego jak sobie poradziłaś, jak odnalazłaś się na studiach, to jak bardzo
+          jesteś ogarnięta i zawsze rześka do pracy. Jestem bardzo z Ciebie dumny i zawsze będę wspierał Ciebie i bronił
+          twojego zdania. <br> <span id="podpis">Twój Igor :*</span></p>
+      </div>
+
+    </div>
+  </div>
+  <div id="starter_2" class="container starter_2 d-flex align-items-center justify-content-center">
+    <div class="row ">
+      <div class="col-md">
+        <button class="game-button green" id="start_game">Rozpocznij grę!</button>
+      </div>
+      <div class="col-md">
+        <button class="game-button red w-100">Nie rozpoczynaj :c</button>
+      </div>
+    </div>
+  </div>
+  <div class="container d-none d-flex align-items-center justify-content-center" id="load">
+    <div class="row">
+      <div class="col-md">
+        <img src="loading.gif" alt="citty" class="img-fluid" width="400">
+        <p class="fs-2 text-center">Yeah zaczynamy</p>
+        <!-- 3  -->
+        <div class="loader loader--style3 text-center" title="2">
+          <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;"
+            xml:space="preserve">
+            <path fill="#000"
+              d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+              <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25"
+                to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+            </path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="game-container">
+    <div id="player"></div>
+    <div id="obstacle"></div>
+
+    <div id="obstacle1"></div>
+    <!-- warstwa -->
+    <div id="obstacle2"></div>
+
+    <div id="obstacle3"></div>
+
+    <div id="obstacle4"></div>
+    <!-- koniec warstawy -->
+    <div id="smaczek1"></div>
+    <div id="smaczek2"></div>
+    <div id="smaczek3"></div>
+    <div class=" container image_container d-flex align-items-center justify-content-center">
+
+      <div class="row">
+        <div class="col-md">
+          <img src="yumi/yumi1.jpg" alt="" class="img-fluid" width="300" id="yumi1">
+          <p id="yumi1text" class="fs-2">mniam mniam mniam..... chcę więcej jestem Yumisława jest 3 w nocy i będę latać
+            jak odrzutowiec po pokoju!!!</p>
+          <img src="yumi/yumi2.jpg" alt="" class="img-fluid" width="300" id="yumi2">
+          <p id="yumi2text" class="fs-2">Jestem taka puszysta takie chlebcio ze mnie w mojej budzie dla kici daj mi
+            jeszcze smaczka plis :333</p>
+          <img src="yumi/yumi3.jpg" alt="" class="img-fluid" width="300" id="yumi3">
+          <p id="yumi3text" class="fs-2">Siwy dym.... ale żem pojadła smaczków pora odpocząć ale na deser sandwich z
+            Carefur Express!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('.kartka').slideUp();
+      $('#finish').addClass('d-none');
+      $('#finish2').addClass('d-none');
+      $('#game-container').hide();
+      $('#yumi1, #yumi2, #yumi3').hide();
+      $('#yumi1text,#yumi2text,#yumi3text').hide();
+
+      // Nowa zmienna, która śledzi, czy gracz zebrał smaczek
+      var smaczekCollected = false;
+      var smaczekCollected2 = false;
+      var smaczekCollected3 = false;
+      $('#start_game').on('click', function () {
+        $('#starter, #starter_2').addClass('d-none');
+        $('#load').removeClass('d-none');
+        setTimeout(
+          function () {
+            $('#load').addClass('d-none');
+            $('#game-container').show();
+          }, 0);
+
+        console.log("siema");
+      });
+
+      var player = $('#player');
+      var obstacle = $('#obstacle');
+      var gameContainer = $('#game-container');
+      var containerWidth = gameContainer.width();
+      var containerHeight = gameContainer.height();
+      var playerWidth = player.width();
+      var playerHeight = player.height();
+      var obstacleWidth = obstacle.width();
+      var obstacleHeight = obstacle.height();
+
+      //kolejny obstacle 1
+      var obstacle1 = $('#obstacle1');
+      var obstacleWidth1 = obstacle1.width();
+      var obstacleHeight1 = obstacle1.height();
+      //kolejny obstacle 2
+      var obstacle2 = $('#obstacle2');
+      var obstacleWidth2 = obstacle2.width();
+      var obstacleHeight2 = obstacle2.height();
+      //kolejny obstacle 3
+      var obstacle3 = $('#obstacle3');
+      var obstacleWidth3 = obstacle3.width();
+      var obstacleHeight3 = obstacle3.height();
+      //kolejny obstacle 4
+      var obstacle4 = $('#obstacle4');
+      var obstacleWidth4 = obstacle4.width();
+      var obstacleHeight4 = obstacle4.height();
+      //smaczek1
+      var smaczek1 = $('#smaczek1');
+      var smaczekWidth1 = smaczek1.width();
+      var smaczekHeight1 = smaczek1.height();
+      //smaczek2
+      var smaczek2 = $('#smaczek2');
+      var smaczekWidth2 = smaczek2.width();
+      var smaczekHeight2 = smaczek2.height();
+      //smaczek3
+      var smaczek3 = $('#smaczek3');
+      var smaczekWidth3 = smaczek3.width();
+      var smaczekHeight3 = smaczek3.height();
+
+
+      var playerPos = {
+        top: 0,
+        left: 0
+      };
+
+      function updatePlayerPosition() {
+        player.css({
+          top: playerPos.top + 'px',
+          left: playerPos.left + 'px'
+        });
+      }
+
+      function checkCollision() {
+        var playerRight = playerPos.left + playerWidth;
+        var playerBottom = playerPos.top + playerHeight;
+        var obstacleRight = obstacle.position().left + obstacleWidth;
+        var obstacleBottom = obstacle.position().top + obstacleHeight;
+
+        if (playerPos.left < obstacleRight &&
+          playerRight > obstacle.position().left &&
+          playerPos.top < obstacleBottom &&
+          playerBottom > obstacle.position().top) {
+          // Możesz dodać tutaj dodatkowe akcje po zderzeniu, na przykład reset gry.
+          playerPos.left = 0;
+          playerPos.top = 0;
+        }
+      }
+
+      function checkCollision1() {
+        var playerRight = playerPos.left + playerWidth;
+        var playerBottom = playerPos.top + playerHeight;
+        var obstacleRight = obstacle1.position().left + obstacleWidth1;
+        var obstacleBottom = obstacle1.position().top + obstacleHeight1;
+
+        if (playerPos.left < obstacleRight &&
+          playerRight > obstacle1.position().left &&
+          playerPos.top < obstacleBottom &&
+          playerBottom > obstacle1.position().top) {
+          // Możesz dodać tutaj dodatkowe akcje po zderzeniu, na przykład reset gry.
+          playerPos.left = 0;
+          playerPos.top = 0;
+        }
+      }
+      function checkCollision2() {
+        var playerRight = playerPos.left + playerWidth;
+        var playerBottom = playerPos.top + playerHeight;
+        var obstacleRight = obstacle2.position().left + obstacleWidth2;
+        var obstacleBottom = obstacle2.position().top + obstacleHeight2;
+
+        if (playerPos.left < obstacleRight &&
+          playerRight > obstacle2.position().left &&
+          playerPos.top < obstacleBottom &&
+          playerBottom > obstacle2.position().top) {
+          // Dodatkowe akcje po zderzeniu z obstacle2
+          playerPos.left = 0;
+          playerPos.top = 0;
+        }
+      }
+
+      function checkCollision3() {
+        var playerRight = playerPos.left + playerWidth;
+        var playerBottom = playerPos.top + playerHeight;
+        var obstacleRight = obstacle3.position().left + obstacleWidth3;
+        var obstacleBottom = obstacle3.position().top + obstacleHeight3;
+
+        if (playerPos.left < obstacleRight &&
+          playerRight > obstacle3.position().left &&
+          playerPos.top < obstacleBottom &&
+          playerBottom > obstacle3.position().top) {
+          // Dodatkowe akcje po zderzeniu z obstacle3
+          playerPos.left = 0;
+          playerPos.top = 0;
+        }
+      }
+
+      function checkCollision4() {
+        var playerRight = playerPos.left + playerWidth;
+        var playerBottom = playerPos.top + playerHeight;
+        var obstacleRight = obstacle4.position().left + obstacleWidth4;
+        var obstacleBottom = obstacle4.position().top + obstacleHeight4;
+
+        if (playerPos.left < obstacleRight &&
+          playerRight > obstacle4.position().left &&
+          playerPos.top < obstacleBottom &&
+          playerBottom > obstacle4.position().top) {
+          // Dodatkowe akcje po zderzeniu z obstacle4
+          playerPos.left = 0;
+          playerPos.top = 0;
+        }
+      }
+
+      function checkCollisionSmaczek1() {
+        if (!smaczekCollected) {
+          var playerRight = playerPos.left + playerWidth;
+          var playerBottom = playerPos.top + playerHeight;
+          var smaczekRight = smaczek1.position().left + smaczekWidth1;
+          var smaczekBottom = smaczek1.position().top + smaczekHeight1;
+
+          if (playerPos.left < smaczekRight &&
+            playerRight > smaczek1.position().left &&
+            playerPos.top < smaczekBottom &&
+            playerBottom > smaczek1.position().top) {
+            // Akcja po zebraniu smaczka
+            smaczek1.hide();
+            $('#yumi1').slideDown();
+            $('#yumi1text').slideDown();
+            setTimeout(
+              function () {
+                $('#yumi1text').slideUp();
+                $('#yumi1').slideUp();
+              }, 5000);
+
+            // Ustawienie zmiennej smaczekCollected na true
+            smaczekCollected = true;
+          }
+        }
+      }
+
+      function checkCollisionSmaczek2() {
+        if (!smaczekCollected2) {
+          var playerRight = playerPos.left + playerWidth;
+          var playerBottom = playerPos.top + playerHeight;
+          var smaczekRight = smaczek2.position().left + smaczekWidth2;
+          var smaczekBottom = smaczek2.position().top + smaczekHeight2;
+
+          if (playerPos.left < smaczekRight &&
+            playerRight > smaczek2.position().left &&
+            playerPos.top < smaczekBottom &&
+            playerBottom > smaczek2.position().top) {
+            // Akcja po zebraniu smaczka
+            smaczek2.hide();
+            $('#yumi2').slideDown();
+            $('#yumi2text').slideDown();
+            setTimeout(
+              function () {
+                $('#yumi2text').slideUp();
+                $('#yumi2').slideUp();
+              }, 6000);
+
+            // Ustawienie zmiennej smaczekCollected2 na true
+            smaczekCollected2 = true;
+          }
+        }
+      }
+
+      function checkCollisionSmaczek3() {
+        if (!smaczekCollected3) {
+          var playerRight = playerPos.left + playerWidth;
+          var playerBottom = playerPos.top + playerHeight;
+          var smaczekRight = smaczek3.position().left + smaczekWidth3;
+          var smaczekBottom = smaczek3.position().top + smaczekHeight3;
+
+          if (playerPos.left < smaczekRight &&
+            playerRight > smaczek3.position().left &&
+            playerPos.top < smaczekBottom &&
+            playerBottom > smaczek3.position().top) {
+            // Akcja po zebraniu smaczka
+            smaczek3.hide();
+            $('#yumi3').slideDown();
+            $('#yumi3text').slideDown();
+            setTimeout(
+              function () {
+                $('#yumi3text').slideUp();
+                $('#yumi3').slideUp();
+              }, 7000);
+
+            setTimeout(
+              function () {
+                $('#game-container').slideUp('slow');
+              }, 7000);
+              setTimeout(
+              function () {
+                $('#finish').removeClass('d-none');
+              }, 7000);
+            
+
+            $('#finish').slideDown('slow');
+            setTimeout(
+              function () {
+                $('#finish2').slideDown('slow');
+                $('#finish2').removeClass('d-none');
+                $('.kartka').slideDown();
+              }, 7000);
+
+            // Ustawienie zmiennej smaczekCollected3 na true
+            smaczekCollected3 = true;
+          }
+        }
+      }
+
+
+      function changeBackgroundImage() {
+        player.css('background-image', 'url("https://i.imgur.com/91sJKBn.gif")');
+      }
+
+      $(document).keydown(function (e) {
+        switch (e.which) {
+          case 37: // left arrow
+            playerPos.left = Math.max(0, playerPos.left - 10);
+            $('#player').addClass('mirrored');
+            changeBackgroundImage();
+            break;
+          case 38: // up arrow
+            playerPos.top = Math.max(0, playerPos.top - 10);
+            changeBackgroundImage();
+            $('#player').removeClass('mirrored');
+            break;
+          case 39: // right arrow
+            playerPos.left = Math.min(containerWidth - playerWidth, playerPos.left + 10);
+            changeBackgroundImage();
+            $('#player').removeClass('mirrored');
+            break;
+          case 40: // down arrow
+            playerPos.top = Math.min(containerHeight - playerHeight, playerPos.top + 10);
+            changeBackgroundImage();
+            $('#player').removeClass('mirrored');
+            break;
+        }
+        checkCollision();
+        checkCollision1();
+        checkCollision2();
+        checkCollision3();
+        checkCollision4();
+
+        checkCollisionSmaczek1();
+        checkCollisionSmaczek2();
+        checkCollisionSmaczek3();
+        updatePlayerPosition();
+      });
+    });
+  </script>
+
+  <!--
+ jesli #player dotknie #smaczek1 to wtedy # smaczek1 znika i cos sie dzieje
+-->
+
+</body>
+
+</html>
